@@ -231,13 +231,13 @@ export default function EventDetailPage() {
   const getEventTypeIcon = (type: EventType) => {
     switch (type) {
       case 'memorial':
-        return <Heart className="h-5 w-5 text-rose-500" />;
+        return <Heart className="h-5 w-5" style={{ color: "#9f7756" }} />;
       case 'anniversary':
-        return <Calendar className="h-5 w-5 text-indigo-500" />;
+        return <Calendar className="h-5 w-5" style={{ color: "#72513a" }} />;
       case 'gathering':
-        return <Users className="h-5 w-5 text-amber-500" />;
+        return <Users className="h-5 w-5" style={{ color: "#9f7756" }} />;
       default:
-        return <Calendar className="h-5 w-5 text-blue-500" />;
+        return <Calendar className="h-5 w-5" style={{ color: "#72513a" }} />;
     }
   };
   
@@ -261,8 +261,8 @@ export default function EventDetailPage() {
         <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100 p-8">
           <div className="flex items-center justify-center h-24">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500 mx-auto"></div>
-              <p className="mt-4 text-gray-600">Loading event details...</p>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#72513a] mx-auto"></div>
+              <p className="mt-4 text-[#422717]">Loading event details...</p>
             </div>
           </div>
         </div>
@@ -275,11 +275,11 @@ export default function EventDetailPage() {
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100 p-8">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Event Not Found</h2>
-            <p className="text-gray-600 mb-6">The event you're looking for doesn't exist or has been removed.</p>
+            <h2 className="text-2xl font-bold text-[#422717] mb-4">Event Not Found</h2>
+            <p className="text-[#72513a] mb-6">The event you're looking for doesn't exist or has been removed.</p>
             <button
               onClick={() => router.push('/events')}
-              className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-[#fcfcfb] bg-[#72513a] hover:bg-[#422717] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756]"
             >
               <ChevronLeft className="h-5 w-5 mr-2" />
               Back to Events
@@ -297,7 +297,7 @@ export default function EventDetailPage() {
     <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       {/* Success message */}
       {successMessage && (
-        <div className="mb-6 p-4 bg-green-50 border-l-4 border-green-500 text-green-700 flex items-center">
+        <div className="mb-6 p-4 bg-[#d3bfaa30] border-l-4 border-[#9f7756] text-[#72513a] flex items-center">
           <Check className="h-5 w-5 mr-2" />
           <p>{successMessage}</p>
         </div>
@@ -306,7 +306,7 @@ export default function EventDetailPage() {
       <div className="mb-6 flex items-center justify-between">
         <button
           onClick={() => router.back()}
-          className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          className="inline-flex items-center px-3 py-2 border border-[#d3bfaa] shadow-sm text-sm font-medium rounded-md text-[#422717] bg-[#fcfcfb] hover:bg-[#ede7e3] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756]"
         >
           <ChevronLeft className="h-5 w-5 mr-1" />
           Back
@@ -328,7 +328,7 @@ export default function EventDetailPage() {
                 setSuccessMessage('Link copied to clipboard');
               }
             }}
-            className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-flex items-center px-3 py-2 border border-[#d3bfaa] shadow-sm text-sm font-medium rounded-md text-[#422717] bg-[#fcfcfb] hover:bg-[#ede7e3] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756]"
           >
             <Share className="h-5 w-5 mr-1" />
             Share
@@ -336,7 +336,7 @@ export default function EventDetailPage() {
           
           <Link
             href={`/events/${id}/edit`}
-            className="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-[#fcfcfb] bg-[#72513a] hover:bg-[#422717] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756]"
           >
             <Edit className="h-5 w-5 mr-1" />
             Edit
@@ -344,17 +344,17 @@ export default function EventDetailPage() {
         </div>
       </div>
       
-      <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
+      <div className="bg-[#fcfcfb] rounded-xl shadow-xl overflow-hidden border border-[#ede7e3]">
         {/* Event details */}
         <div className="p-6 sm:p-8">
-          <div className="flex items-center space-x-2 text-sm font-medium text-gray-500 mb-4">
+          <div className="flex items-center space-x-2 text-sm font-medium text-[#72513a] mb-4">
             <span className="flex items-center">
               {getEventTypeIcon(event.eventType)}
               <span className="ml-1">{getEventTypeLabel(event.eventType)}</span>
             </span>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">{event.title}</h1>
+          <h1 className="text-3xl font-bold text-[#422717] mb-6">{event.title}</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-start">
@@ -362,9 +362,9 @@ export default function EventDetailPage() {
                 <Calendar className="h-6 w-6" />
               </div>
               <div className="ml-4">
-                <h2 className="text-lg font-medium text-gray-900">Date & Time</h2>
-                <p className="text-gray-600">{formatDate(event.date)}</p>
-                <p className="text-gray-600">{formatTime(event.date)}</p>
+                <h2 className="text-lg font-medium text-[#422717]">Date & Time</h2>
+                <p className="text-[#72513a]">{formatDate(event.date)}</p>
+                <p className="text-[#72513a]">{formatTime(event.date)}</p>
               </div>
             </div>
             
@@ -373,8 +373,8 @@ export default function EventDetailPage() {
                 <MapPin className="h-6 w-6" />
               </div>
               <div className="ml-4">
-                <h2 className="text-lg font-medium text-gray-900">Location</h2>
-                <p className="text-gray-600">{event.location}</p>
+                <h2 className="text-lg font-medium text-[#422717]">Location</h2>
+                <p className="text-[#72513a]">{event.location}</p>
               </div>
             </div>
             
@@ -383,8 +383,8 @@ export default function EventDetailPage() {
                 <Users className="h-6 w-6" />
               </div>
               <div className="ml-4">
-                <h2 className="text-lg font-medium text-gray-900">Attendance</h2>
-                <p className="text-gray-600">
+                <h2 className="text-lg font-medium text-[#422717]">Attendance</h2>
+                <p className="text-[#72513a]">
                   {attendingCount} confirmed
                   {event.maxAttendees && (
                     <span> / {event.maxAttendees} max</span>
@@ -395,21 +395,21 @@ export default function EventDetailPage() {
           </div>
           
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">About this Event</h2>
-            <div className="prose prose-indigo max-w-none text-gray-700">
+            <h2 className="text-xl font-semibold text-[#422717] mb-3">About this Event</h2>
+            <div className="prose max-w-none text-[#72513a]">
               <p>{event.description}</p>
             </div>
           </div>
           
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">Organizer</h2>
-            <p className="text-gray-700">{event.organizer}</p>
+            <h2 className="text-xl font-semibold text-[#422717] mb-3">Organizer</h2>
+            <p className="text-[#72513a]">{event.organizer}</p>
             <div className="mt-3 flex items-center space-x-4">
-              <a href="#" className="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-500">
+              <a href="#" className="inline-flex items-center text-sm text-[#72513a] hover:text-[#9f7756]">
                 <Mail className="h-4 w-4 mr-1" />
                 Contact organizer
               </a>
-              <a href="#" className="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-500">
+              <a href="#" className="inline-flex items-center text-sm text-[#72513a] hover:text-[#9f7756]">
                 <Phone className="h-4 w-4 mr-1" />
                 Call organizer
               </a>
@@ -417,20 +417,20 @@ export default function EventDetailPage() {
           </div>
           
           {/* RSVP Section */}
-          <div className="border-t border-gray-200 pt-6">
+          <div className="border-t border-[#ede7e3] pt-6">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold text-gray-900">RSVPs ({rsvps.length})</h2>
+              <h2 className="text-xl font-semibold text-[#422717]">RSVPs ({rsvps.length})</h2>
               {!showRSVPForm ? (
                 <button
                   onClick={() => setShowRSVPForm(true)}
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-[#fcfcfb] bg-[#72513a] hover:bg-[#422717] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756]"
                 >
                   RSVP to this event
                 </button>
               ) : (
                 <button
                   onClick={() => setShowRSVPForm(false)}
-                  className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="inline-flex items-center px-4 py-2 border border-[#d3bfaa] text-sm font-medium rounded-md shadow-sm text-[#422717] bg-[#fcfcfb] hover:bg-[#ede7e3] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756]"
                 >
                   <X className="h-5 w-5 mr-1" />
                   Cancel
@@ -440,11 +440,11 @@ export default function EventDetailPage() {
             
             {/* RSVP Form */}
             {showRSVPForm && (
-              <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Your RSVP</h3>
+              <div className="bg-[#ede7e330] rounded-lg p-6 mb-6">
+                <h3 className="text-lg font-medium text-[#422717] mb-4">Your RSVP</h3>
                 
                 {rsvpError && (
-                  <div className="mb-4 p-3 bg-red-50 border-l-4 border-red-500 text-red-700">
+                  <div className="mb-4 p-3 bg-[#223d3c10] border-l-4 border-[#223d3c] text-[#223d3c]">
                     <p>{rsvpError}</p>
                   </div>
                 )}
@@ -452,7 +452,7 @@ export default function EventDetailPage() {
                 <form onSubmit={handleRSVPSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="name" className="block text-sm font-medium text-[#422717]">
                         Name
                       </label>
                       <input
@@ -462,12 +462,12 @@ export default function EventDetailPage() {
                         required
                         value={rsvpForm.name}
                         onChange={handleRSVPChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-[#d3bfaa] shadow-sm focus:border-[#72513a] focus:ring-[#9f7756] sm:text-sm"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="email" className="block text-sm font-medium text-[#422717]">
                         Email
                       </label>
                       <input
@@ -477,13 +477,13 @@ export default function EventDetailPage() {
                         required
                         value={rsvpForm.email}
                         onChange={handleRSVPChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-[#d3bfaa] shadow-sm focus:border-[#72513a] focus:ring-[#9f7756] sm:text-sm"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">Attendance</label>
+                    <label className="block text-sm font-medium text-[#422717]">Attendance</label>
                     <div className="mt-2 space-x-4">
                       <label className="inline-flex items-center">
                         <input
@@ -493,7 +493,7 @@ export default function EventDetailPage() {
                           onChange={() => setRsvpForm(prev => ({ ...prev, attending: true }))}
                           className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300"
                         />
-                        <span className="ml-2 text-gray-700">I will attend</span>
+                        <span className="ml-2 text-[#72513a]">I will attend</span>
                       </label>
                       <label className="inline-flex items-center">
                         <input
@@ -503,13 +503,13 @@ export default function EventDetailPage() {
                           onChange={() => setRsvpForm(prev => ({ ...prev, attending: false }))}
                           className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300"
                         />
-                        <span className="ml-2 text-gray-700">I cannot attend</span>
+                        <span className="ml-2 text-[#72513a]">I cannot attend</span>
                       </label>
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="message" className="block text-sm font-medium text-[#422717]">
                       Message (Optional)
                     </label>
                     <textarea
@@ -518,7 +518,7 @@ export default function EventDetailPage() {
                       rows={3}
                       value={rsvpForm.message}
                       onChange={handleRSVPChange}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-[#d3bfaa] shadow-sm focus:border-[#72513a] focus:ring-[#9f7756] sm:text-sm"
                       placeholder="Add a personal message or note"
                     />
                   </div>
@@ -527,11 +527,11 @@ export default function EventDetailPage() {
                     <button
                       type="submit"
                       disabled={isRSVPSubmitting}
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-[#fcfcfb] bg-[#72513a] hover:bg-[#422717] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756] disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isRSVPSubmitting ? (
                         <>
-                          <div className="animate-spin h-4 w-4 mr-2 border-2 border-t-transparent border-white rounded-full"></div>
+                          <div className="animate-spin h-4 w-4 mr-2 border-2 border-t-transparent border-[#fcfcfb] rounded-full"></div>
                           Submitting...
                         </>
                       ) : (
@@ -550,16 +550,16 @@ export default function EventDetailPage() {
             {rsvps.length > 0 ? (
               <div className="space-y-4">
                 {rsvps.map((rsvp) => (
-                  <div key={rsvp.id} className="border-b border-gray-200 pb-4 last:border-b-0">
+                  <div key={rsvp.id} className="border-b border-[#ede7e3] pb-4 last:border-b-0">
                     <div className="flex items-start">
-                      <div className={`flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full ${rsvp.attending ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
+                      <div className={`flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full ${rsvp.attending ? 'bg-[#d3bfaa30] text-[#72513a]' : 'bg-[#223d3c10] text-[#223d3c]'}`}>
                         {rsvp.attending ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
                       </div>
                       <div className="ml-3 flex-1">
-                        <p className="text-sm font-medium text-gray-900">{rsvp.name}</p>
-                        <p className="text-sm text-gray-500">{rsvp.attending ? 'Attending' : 'Not attending'}</p>
+                        <p className="text-sm font-medium text-[#422717]">{rsvp.name}</p>
+                        <p className="text-sm text-[#72513a]">{rsvp.attending ? 'Attending' : 'Not attending'}</p>
                         {rsvp.message && (
-                          <p className="mt-1 text-sm text-gray-700">"{rsvp.message}"</p>
+                          <p className="mt-1 text-sm text-[#72513a]">"{rsvp.message}"</p>
                         )}
                       </div>
                     </div>
@@ -567,7 +567,7 @@ export default function EventDetailPage() {
                 ))}
               </div>
             ) : (
-              <p className="text-gray-500 italic">No RSVPs yet. Be the first to RSVP!</p>
+              <p className="text-[#72513a] italic">No RSVPs yet. Be the first to RSVP!</p>
             )}
           </div>
         </div>

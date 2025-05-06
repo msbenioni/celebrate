@@ -45,10 +45,10 @@ export function AuthForm({ mode }: AuthFormProps) {
   }
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full max-w-md" style={{ backgroundColor: "#72513a", color: "#fcfcfb", borderColor: "#9f7756" }}>
       <CardHeader>
-        <CardTitle>{mode === 'login' ? 'Sign In' : 'Create Account'}</CardTitle>
-        <CardDescription>
+        <CardTitle style={{ color: "#fcfcfb" }}>{mode === 'login' ? 'Sign In' : 'Create Account'}</CardTitle>
+        <CardDescription style={{ color: "#ede7e3" }}>
           {mode === 'login'
             ? 'Enter your email and password to sign in'
             : 'Enter your details to create an account'}
@@ -62,9 +62,9 @@ export function AuthForm({ mode }: AuthFormProps) {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel style={{ color: "#ede7e3" }}>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="you@example.com" {...field} />
+                    <Input placeholder="you@example.com" {...field} style={{ backgroundColor: "#d3bfaa30", borderColor: "#9f7756", color: "#fcfcfb" }} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -75,15 +75,15 @@ export function AuthForm({ mode }: AuthFormProps) {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel style={{ color: "#ede7e3" }}>Password</FormLabel>
                   <FormControl>
-                    <Input type="password" {...field} />
+                    <Input type="password" {...field} style={{ backgroundColor: "#d3bfaa30", borderColor: "#9f7756", color: "#fcfcfb" }} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button type="submit" className="w-full" disabled={isLoading} style={{ backgroundColor: "#9f7756", color: "#fcfcfb", borderColor: "transparent" }}>
               {isLoading ? (
                 <div className="flex items-center gap-2">
                   <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
@@ -100,16 +100,16 @@ export function AuthForm({ mode }: AuthFormProps) {
       </CardContent>
       <CardFooter className="flex justify-center">
         {mode === 'login' ? (
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm" style={{ color: "#ede7e3" }}>
             Don't have an account?{' '}
-            <Button variant="link" className="p-0" onClick={() => router.push('/signup')}>
+            <Button variant="link" className="p-0" onClick={() => router.push('/signup')} style={{ color: "#fcfcfb" }}>
               Sign up
             </Button>
           </p>
         ) : (
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm" style={{ color: "#ede7e3" }}>
             Already have an account?{' '}
-            <Button variant="link" className="p-0" onClick={() => router.push('/login')}>
+            <Button variant="link" className="p-0" onClick={() => router.push('/login')} style={{ color: "#fcfcfb" }}>
               Sign in
             </Button>
           </p>

@@ -3,72 +3,99 @@
 @tailwind utilities;
 
 :root {
-  /* Main brand colors */
-  --primary: 232 175 157; /* Peach/coral */
-  --primary-foreground: 255 255 255;
+  /* New Neutral Palette */
+  --primary: 114 81 58; /* Mid-tone warm brown #72513A */
+  --primary-foreground: 252 252 251; /* Almost white #FCFCFB */
   
-  --secondary: 175 197 194; /* Sage green */
-  --secondary-foreground: 60 60 60;
+  --secondary: 159 119 86; /* Copper gold #9F7756 */
+  --secondary-foreground: 252 252 251; /* Almost white #FCFCFB */
   
   /* Neutrals */
-  --background: 252 250 249;
-  --foreground: 51 51 51;
+  --background: 237 231 227; /* Light neutral beige #EDE7E3 */
+  --foreground: 66 39 23; /* Deep chocolate brown #422717 */
   
   /* Accents */
-  --accent: 224 217 208; /* Light beige */
-  --accent-foreground: 51 51 51;
+  --accent: 211 191 170; /* Warm tan #D3BFAA */
+  --accent-foreground: 66 39 23; /* Deep chocolate brown #422717 */
   
   /* UI elements */
-  --card: 255 255 255;
-  --card-foreground: 51 51 51;
+  --card: 252 252 251; /* Almost white #FCFCFB */
+  --card-foreground: 66 39 23; /* Deep chocolate brown #422717 */
   
-  --popover: 255 255 255;
-  --popover-foreground: 51 51 51;
+  --popover: 252 252 251; /* Almost white #FCFCFB */
+  --popover-foreground: 66 39 23; /* Deep chocolate brown #422717 */
   
-  --muted: 245 245 245;
-  --muted-foreground: 115 115 115;
+  --muted: 211 191 170; /* Warm tan #D3BFAA */
+  --muted-foreground: 66 39 23; /* Deep chocolate brown #422717 */
   
-  --border: 232 232 232;
+  --border: 211 191 170; /* Warm tan #D3BFAA */
   
-  --input: 255 255 255;
-  --input-foreground: 51 51 51;
+  --input: 252 252 251; /* Almost white #FCFCFB */
+  --input-foreground: 66 39 23; /* Deep chocolate brown #422717 */
   
   /* Interactive states */
-  --ring: 232 175 157;
+  --ring: 159 119 86; /* Copper gold #9F7756 */
   
   --destructive: 227 94 101;
   --destructive-foreground: 255 255 255;
   
+  /* Navbar/Footer */
+  --navbar: 114 81 58; /* Mid-tone warm brown #72513A */
+  --navbar-foreground: 252 252 251; /* Almost white #FCFCFB */
+  
   /* Radius and Shadows */
-  --radius: 0.75rem;
+  --radius: 0.5rem;
+}
+
+/* Ensure all borders use our earthy color palette */
+*[style*="border"] {
+  border-color: #d3bfaa !important; /* Warm tan #D3BFAA */
+}
+
+/* Target all border properties */
+*[style*="border-top-color"],
+*[style*="border-right-color"],
+*[style*="border-bottom-color"],
+*[style*="border-left-color"] {
+  border-color: #d3bfaa !important; /* Warm tan #D3BFAA */
+}
+
+/* Target computed styles */
+*::before, *::after {
+  border-color: #d3bfaa !important; /* Warm tan #D3BFAA */
 }
 
 .dark {
-  --primary: 232 175 157;
-  --primary-foreground: 255 255 255;
+  /* Dark mode colors based on the new palette */
+  --primary: 114 81 58; /* Mid-tone warm brown #72513A */
+  --primary-foreground: 252 252 251; /* Almost white #FCFCFB */
   
-  --secondary: 175 197 194;
-  --secondary-foreground: 255 255 255;
+  --secondary: 159 119 86; /* Copper gold #9F7756 */
+  --secondary-foreground: 252 252 251; /* Almost white #FCFCFB */
   
-  --background: 42 42 42;
-  --foreground: 250 250 250;
+  --background: 34 61 60; /* Deep forest green #223D3C */
+  --foreground: 252 252 251; /* Almost white #FCFCFB */
   
-  --accent: 70 70 70;
-  --accent-foreground: 250 250 250;
+  --accent: 211 191 170; /* Warm tan #D3BFAA */
+  --accent-foreground: 34 61 60; /* Deep forest green #223D3C */
   
-  --card: 60 60 60;
-  --card-foreground: 250 250 250;
+  --card: 66 39 23; /* Deep chocolate brown #422717 */
+  --card-foreground: 252 252 251; /* Almost white #FCFCFB */
   
-  --popover: 60 60 60;
-  --popover-foreground: 250 250 250;
+  --popover: 66 39 23; /* Deep chocolate brown #422717 */
+  --popover-foreground: 252 252 251; /* Almost white #FCFCFB */
   
-  --muted: 70 70 70;
-  --muted-foreground: 200 200 200;
+  --muted: 114 81 58; /* Mid-tone warm brown #72513A */
+  --muted-foreground: 237 231 227; /* Light neutral beige #EDE7E3 */
   
-  --border: 80 80 80;
+  --border: 114 81 58; /* Mid-tone warm brown #72513A */
   
-  --input: 60 60 60;
-  --input-foreground: 250 250 250;
+  --input: 66 39 23; /* Deep chocolate brown #422717 */
+  --input-foreground: 252 252 251; /* Almost white #FCFCFB */
+  
+  /* Navbar/Footer in dark mode */
+  --navbar: 66 39 23; /* Deep chocolate brown #422717 */
+  --navbar-foreground: 252 252 251; /* Almost white #FCFCFB */
 }
 
 @layer base {
@@ -78,74 +105,174 @@
   
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f5f5f5' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-color: rgb(255, 248, 245); /* Explicitly set Porcelain White background */
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f7e7ce' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
     background-attachment: fixed;
   }
   
+  /* Celebration theme typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif tracking-tight;
+    font-family: 'Playfair Display', serif;
   }
   
   h1 {
     @apply text-3xl sm:text-4xl md:text-5xl font-semibold;
-    background: linear-gradient(to right, rgb(var(--primary)), rgb(var(--secondary)));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
   }
   
   h2 {
     @apply text-2xl sm:text-3xl font-medium;
+    color: #422717; /* Deep chocolate brown #422717 */
   }
   
   h3 {
     @apply text-xl sm:text-2xl font-medium;
+    color: #9f7756; /* Copper gold #9F7756 */
+  }
+  
+  /* Special text for highlights */
+  .elegant-script {
+    font-family: 'Great Vibes', cursive;
+    @apply text-2xl sm:text-3xl;
+    color: #9f7756; /* Copper gold #9F7756 */
   }
 }
 
 @layer components {
+  /* Celebration theme hero section with floral pattern background */
   .hero-section {
-    @apply relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8;
-    background: linear-gradient(135deg, rgba(var(--primary), 0.1) 0%, rgba(var(--secondary), 0.1) 100%);
+    @apply relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8;
+    background: linear-gradient(135deg, rgba(var(--primary), 0.2) 0%, rgba(var(--accent), 0.2) 100%);
+    position: relative;
   }
   
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30c-4.2-4.2-8.4-8.4-12.7-12.7C13.1 13.1 7.8 7.8 2.5 2.5c-.8-.8-2-.8-2.8 0-.8.8-.8 2 0 2.8 5.3 5.3 10.6 10.6 15.9 15.9 4.2 4.2 8.4 8.4 12.7 12.7-4.2 4.2-8.4 8.4-12.7 12.7-5.3 5.3-10.6 10.6-15.9 15.9-.8.8-.8 2 0 2.8.8.8 2 .8 2.8 0 5.3-5.3 10.6-10.6 15.9-15.9 4.2-4.2 8.4-8.4 12.7-12.7 4.2 4.2 8.4 8.4 12.7 12.7 5.3 5.3 10.6 10.6 15.9 15.9.8.8 2 .8 2.8 0 .8-.8.8-2 0-2.8-5.3-5.3-10.6-10.6-15.9-15.9-4.3-4.2-8.5-8.4-12.7-12.7z' fill='%23d3bfaa' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+    z-index: -1;
+  }
+  
+  /* Elegant card styling with warm tan border */
   .feature-card {
-    @apply bg-card rounded-xl p-6 shadow-sm transition-all duration-200 hover:shadow-md;
-    border: 1px solid rgba(var(--border), 0.2);
+    @apply bg-card rounded-lg p-6 shadow-sm transition-all duration-300 hover:shadow-md;
+    border: 1px solid #d3bfaa; /* Warm tan #D3BFAA */
+    background-color: #fcfcfb; /* Almost white #FCFCFB */
   }
   
+  /* Mid-tone brown primary button with rounded corners */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground px-6 py-3 font-medium transition-all hover:bg-opacity-90;
-    box-shadow: 0 4px 14px rgba(var(--primary), 0.25);
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all;
+    background-color: #72513a; /* Mid-tone warm brown #72513A */
+    color: #fcfcfb; /* Almost white #FCFCFB */
+    box-shadow: 0 4px 14px rgba(114, 81, 58, 0.2);
   }
   
+  .btn-primary:hover {
+    background-color: #9f7756; /* Copper gold #9F7756 */
+  }
+  
+  /* Copper gold secondary button */
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full bg-secondary text-secondary-foreground px-6 py-3 font-medium transition-all hover:bg-opacity-90;
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all;
+    background-color: #9f7756; /* Copper gold #9F7756 */
+    color: #fcfcfb; /* Almost white #FCFCFB */
   }
   
+  .btn-secondary:hover {
+    background-color: #72513a; /* Mid-tone warm brown #72513A */
+  }
+  
+  /* Warm tan outline button */
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-full border border-primary bg-transparent px-6 py-3 font-medium text-primary transition-all hover:bg-primary hover:text-primary-foreground;
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all;
+    background-color: transparent;
+    border: 1px solid #d3bfaa; /* Warm tan #D3BFAA */
+    color: #422717; /* Deep chocolate brown #422717 */
   }
   
+  .btn-outline:hover {
+    background-color: #d3bfaa; /* Warm tan #D3BFAA */
+    color: #422717; /* Deep chocolate brown #422717 */
+  }
+  
+  /* Elegant navigation links */
   .nav-link {
-    @apply font-medium text-muted-foreground transition-colors hover:text-foreground;
+    @apply font-medium transition-colors;
+    letter-spacing: 0.3px;
+    color: #fcfcfb; /* Almost white #FCFCFB */
   }
   
+  .nav-link:hover {
+    color: #9f7756; /* Copper gold #9F7756 */
+  }
+  
+  /* Form inputs with warm tan border */
   .form-input {
-    @apply rounded-lg border-border bg-input p-3 text-input-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+    @apply rounded-md p-3 focus:outline-none;
+    background-color: #fcfcfb; /* Almost white #FCFCFB */
+    color: #422717; /* Deep chocolate brown #422717 */
+    border: 1px solid #d3bfaa; /* Warm tan #D3BFAA */
   }
   
-  .memorial-card {
-    @apply bg-card rounded-xl overflow-hidden shadow-sm transition-all duration-200 hover:shadow-md;
-    border: 1px solid rgba(var(--border), 0.2);
+  .form-input:focus {
+    border-color: #9f7756; /* Copper gold #9F7756 */
+    box-shadow: 0 0 0 1px #9f7756; /* Copper gold #9F7756 */
   }
   
-  .memorial-image {
-    @apply object-cover w-full h-56;
+  /* Celebration event card */
+  .event-card {
+    @apply rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md;
+    background-color: #fcfcfb; /* Almost white #FCFCFB */
+    border: 1px solid #d3bfaa; /* Warm tan #D3BFAA */
   }
   
-  .tribute-header {
-    @apply text-center max-w-3xl mx-auto my-12;
+  .event-card:hover {
+    border-color: #9f7756; /* Copper gold #9F7756 */
+  }
+  
+  .event-image {
+    @apply object-cover w-full h-64;
+    position: relative;
+  }
+  
+  .event-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to top, rgba(255,255,255,0.8), transparent);
+  }
+  
+  /* Celebration header styling */
+  .Celebration-header {
+    @apply text-center max-w-3xl mx-auto my-16;
+    position: relative;
+  }
+  
+  .Celebration-header::before,
+  .Celebration-header::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100px;
+    background: rgba(var(--secondary), 0.5);
+    top: 50%;
+  }
+  
+  .Celebration-header::before {
+    left: -120px;
+  }
+  
+  .Celebration-header::after {
+    right: -120px;
   }
 }
 

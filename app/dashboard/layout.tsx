@@ -26,10 +26,10 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-[#fcfcfb]" style={{ borderColor: "#d3bfaa" }}>
       {/* Sidebar */}
-      <div className="hidden md:flex md:w-64 md:flex-col">
-        <div className="flex flex-col flex-grow pt-5 overflow-y-auto bg-white border-r">
+      <div className="hidden md:flex md:w-64 md:flex-col" style={{ borderColor: "#d3bfaa" }}>
+        <div className="flex flex-col flex-grow pt-5 overflow-y-auto bg-[#fcfcfb] border-r border-[#d3bfaa]" style={{ borderColor: "#d3bfaa" }}>
           <div className="flex items-center justify-center flex-shrink-0 px-4 mb-6">
             <Link href="/" className="flex items-center">
               <Heart className="h-8 w-8 text-indigo-600" />
@@ -37,26 +37,26 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             </Link>
           </div>
           <div className="flex flex-col flex-grow px-4 mt-5">
-            <nav className="flex-1 space-y-1 bg-white">
+            <nav className="flex-1 space-y-1 bg-[#fcfcfb]">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`flex items-center px-4 py-3 text-sm font-medium rounded-md transition-colors duration-150 ease-in-out ${isActive(item.href) ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'}`}
+                    className={`flex items-center px-4 py-3 text-sm font-medium rounded-md transition-colors duration-150 ease-in-out ${isActive(item.href) ? 'bg-[#d3bfaa30] text-[#72513a]' : 'text-[#72513a] hover:bg-[#ede7e350] hover:text-[#422717]'}`}
                   >
-                    <Icon className={`flex-shrink-0 w-6 h-6 mr-3 ${isActive(item.href) ? 'text-indigo-500' : 'text-gray-400 group-hover:text-gray-500'}`} />
+                    <Icon className={`flex-shrink-0 w-6 h-6 mr-3 ${isActive(item.href) ? 'text-[#9f7756]' : 'text-[#72513a80] group-hover:text-[#72513a]'}`} />
                     {item.name}
                   </Link>
                 );
               })}
             </nav>
           </div>
-          <div className="flex-shrink-0 p-4 border-t">
+          <div className="flex-shrink-0 p-4 border-t border-[#d3bfaa]" style={{ borderColor: "#d3bfaa" }}>
             <Link
               href="/api/auth/signout"
-              className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-red-600 bg-white border border-red-200 rounded-md hover:bg-red-50 transition-colors duration-150"
+              className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-[#422717] bg-[#fcfcfb] border border-[#d3bfaa] rounded-md hover:bg-[#ede7e350] transition-colors duration-150"
             >
               <LogOut className="h-5 w-5 mr-2" />
               Sign Out
@@ -66,8 +66,8 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       </div>
 
       {/* Mobile header */}
-      <div className="flex flex-col flex-1 overflow-hidden">
-        <div className="relative z-10 flex-shrink-0 h-16 bg-white border-b md:hidden">
+      <div className="flex flex-col flex-1 overflow-hidden" style={{ borderColor: "#d3bfaa" }}>
+        <div className="relative z-10 flex-shrink-0 h-16 bg-[#fcfcfb] border-b border-[#d3bfaa] md:hidden" style={{ borderColor: "#d3bfaa" }}>
           <div className="flex items-center justify-between h-full px-4">
             <Link href="/" className="flex items-center">
               <Heart className="h-8 w-8 text-indigo-600" />
@@ -76,7 +76,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             <div className="flex items-center">
               <button
                 type="button"
-                className="inline-flex items-center justify-center p-2 text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                className="inline-flex items-center justify-center p-2 text-[#72513a] rounded-md hover:text-[#422717] hover:bg-[#ede7e350] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#9f7756]"
               >
                 <span className="sr-only">Open main menu</span>
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,7 +88,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         </div>
 
         {/* Main content */}
-        <main className="flex-1 overflow-y-auto bg-gray-50">
+        <main className="flex-1 overflow-y-auto bg-[#fcfcfb]">
           <div className="py-6">
             <div className="px-4 sm:px-6 md:px-8">
               {children}
