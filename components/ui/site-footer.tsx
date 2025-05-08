@@ -27,10 +27,10 @@ export function SiteFooter() {
                 <Heart className="h-5 w-5 text-[#9f7756]" />
                 <Heart className="h-5 w-5 text-[#9f7756] absolute -top-1 -right-1 opacity-50 scale-75" />
               </div>
-              <span className="font-serif text-lg font-medium text-[#422717]">Celebrate</span>
+              <span className="font-serif text-lg font-medium text-[#422717]">Celebrate & Remember</span>
             </div>
             <p className="text-sm text-[#72513a]">
-              Beautiful, personalized Celebration websites to share your special day with loved ones.
+              Beautiful, personalized websites to Celebrate Life's Milestones and Honor Loved Ones.
             </p>
             <div className="flex space-x-4 pt-2">
               <Link
@@ -68,10 +68,18 @@ export function SiteFooter() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/features/Celebration-websites"
+                  href="/features/celebration-websites"
                   className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
                 >
                   Celebration Websites
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/features/tribute-memorial"
+                  className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
+                >
+                  Tribute & Memorial Pages
                 </Link>
               </li>
               <li>
@@ -87,7 +95,7 @@ export function SiteFooter() {
                   href="/features/photo-gallery"
                   className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
                 >
-                  Photo Gallery
+                  Photo & Video Galleries
                 </Link>
               </li>
               <li>
@@ -210,7 +218,7 @@ export function SiteFooter() {
 
         <div className="mt-16 border-t border-[#d3bfaa] pt-8">
           <p className="text-center text-sm text-[#72513a]">
-            &copy; {new Date().getFullYear()} Celebrate. All rights reserved.
+            &copy; {new Date().getFullYear()} Celebrate & Remember. All rights reserved.
           </p>
         </div>
       </div>

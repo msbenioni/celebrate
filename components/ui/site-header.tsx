@@ -17,10 +17,10 @@ export function SiteHeader() {
   };
 
   const navItems = [
-    { href: '/dashboard', label: 'Dashboard' },
-    { href: '/create-event', label: 'Create Celebration' },
-    { href: '/explore', label: 'Explore' },
-    { href: '/help', label: 'Help' },
+    { href: '/dashboard', label: 'My Celebrations & Tributes' },
+    { href: '/create-event', label: 'Create a Celebration or Tribute' },
+    { href: '/explore', label: 'Explore Memories & Events' },
+    { href: '/help', label: 'Support & Guidance' },
   ];
 
   const isActive = (path: string) => {
@@ -37,7 +37,7 @@ export function SiteHeader() {
               <Heart className="h-6 w-6 absolute -top-1 -right-1 opacity-50 scale-75 transition-transform group-hover:scale-90" style={{ color: '#9f7756' }} />
             </div>
             <span className="font-serif text-xl font-medium" style={{ color: '#fcfcfb' }}>
-              Let's Celebrate
+              Celebrate & Remember
             </span>
           </Link>
         </div>
@@ -62,12 +62,12 @@ export function SiteHeader() {
           {/* Theme toggle removed */}
           <Link href="/login">
             <Button variant="outline" className="btn-outline" size="sm" style={{ backgroundColor: "transparent", color: "#fcfcfb", borderColor: "#9f7756" }}>
-              Log in
+              Sign In to Access Memories
             </Button>
           </Link>
           <Link href="/signup">
             <Button className="btn-primary" size="sm" style={{ backgroundColor: "#72513a", color: "#fcfcfb" }}>
-              Get Started
+              Create Your Website
             </Button>
           </Link>
         </div>
@@ -109,12 +109,12 @@ export function SiteHeader() {
             <div className="flex flex-col space-y-3 pt-2">
               <Link href="/login">
                 <Button variant="outline" className="btn-outline w-full" style={{ backgroundColor: "transparent", color: "#fcfcfb", borderColor: "#9f7756" }}>
-                  Log in
+                  Sign In to Access Memories
                 </Button>
               </Link>
               <Link href="/signup">
                 <Button className="btn-primary w-full" style={{ backgroundColor: "#72513a", color: "#fcfcfb" }}>
-                  Get Started
+                  Create Your Website
                 </Button>
               </Link>
               <div className="flex justify-center pt-4">

@@ -22,9 +22,9 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Tribute Hub | Beautiful Memorial Websites',
-  description: 'Create beautiful, personalized memorial websites to honor and remember your loved ones',
-  keywords: 'memorial, tribute, remembrance, celebration of life, funeral, obituary, legacy',
+  title: 'Celebrate & Remember | Beautiful Celebration & Memorial Websites',
+  description: 'Create beautiful, personalized websites to celebrate life\'s milestones and honor loved ones',
+  keywords: 'celebration, wedding, birthday, anniversary, memorial, tribute, remembrance, celebration of life, funeral, obituary, legacy, guestbook, rsvp',
 }
 
 export default function RootLayout({
