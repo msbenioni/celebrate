@@ -22,26 +22,21 @@ export function SiteHeader() {
     setIsProfileMenuOpen(!isProfileMenuOpen);
   };
 
+  // Define the type for navigation items
+  type NavItem = {
+    href: string;
+    label: string;
+    icon: React.ElementType;
+    tooltip?: string;
+  };
+
   // Navigation items when user is not signed in
-  const publicNavItems = [
-    { 
-      href: '/design-gallery', 
-      label: 'Design Gallery', 
-      icon: LayoutGrid,
-      tooltip: 'Browse celebration and tribute templates for inspiration.' 
-    },
-  ];
+  const publicNavItems: NavItem[] = [];
 
   // Navigation items when user is signed in
-  const privateNavItems = [
+  const privateNavItems: NavItem[] = [
     { href: '/dashboard', label: 'Dashboard', icon: Home },
     { href: '/create-new', label: 'Create New', icon: PlusCircle },
-    { 
-      href: '/design-gallery', 
-      label: 'Design Gallery', 
-      icon: LayoutGrid,
-      tooltip: 'Browse celebration and tribute templates for inspiration.' 
-    },
     { href: '/help', label: 'Help', icon: HelpCircle },
   ];
 
@@ -122,6 +117,24 @@ export function SiteHeader() {
         <div className="hidden md:flex items-center space-x-4">
           {isLoggedIn ? (
             <div className="flex items-center space-x-4">
+              {/* Design Gallery link */}
+              <div className="relative group mr-2">
+                <Link 
+                  href="/design-gallery" 
+                  className="nav-link flex items-center gap-2"
+                  style={{ color: isActive('/design-gallery') ? '#9f7756' : '#fcfcfb' }}
+                >
+                  <LayoutGrid className="h-4 w-4" />
+                  Design Gallery
+                </Link>
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-0 mb-[-40px] w-max max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
+                  <div className="bg-[#422717] text-[#fcfcfb] text-xs rounded py-1 px-2 shadow-lg">
+                    Browse celebration and tribute templates for inspiration.
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 transform rotate-45 w-2 h-2 bg-[#422717]"></div>
+                  </div>
+                </div>
+              </div>
+
               {/* Notifications icon */}
               <Link href="/notifications" className="relative">
                 <Bell className="h-5 w-5" style={{ color: '#fcfcfb' }} />
@@ -160,6 +173,24 @@ export function SiteHeader() {
             </div>
           ) : (
             <>
+              {/* Design Gallery link */}
+              <div className="relative group mr-4">
+                <Link 
+                  href="/design-gallery" 
+                  className="nav-link flex items-center gap-2"
+                  style={{ color: isActive('/design-gallery') ? '#9f7756' : '#fcfcfb' }}
+                >
+                  <LayoutGrid className="h-4 w-4" />
+                  Design Gallery
+                </Link>
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-0 mb-[-40px] w-max max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
+                  <div className="bg-[#422717] text-[#fcfcfb] text-xs rounded py-1 px-2 shadow-lg">
+                    Browse celebration and tribute templates for inspiration.
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 transform rotate-45 w-2 h-2 bg-[#422717]"></div>
+                  </div>
+                </div>
+              </div>
+
               <Link href="/login">
                 <Button variant="outline" className="btn-outline" size="sm" style={{ backgroundColor: "transparent", color: "#fcfcfb", borderColor: "#9f7756" }}>
                   Sign In
@@ -214,6 +245,10 @@ export function SiteHeader() {
             
             {isLoggedIn ? (
               <div className="flex flex-col space-y-3 border-t border-[#9f7756]/30 mt-4 pt-4">
+                <Link href="/design-gallery" className="text-[#fcfcfb] text-lg flex items-center gap-2">
+                  <LayoutGrid className="h-5 w-5" />
+                  Design Gallery
+                </Link>
                 <Link href="/account" className="text-[#fcfcfb] text-lg">
                   My Account
                 </Link>
@@ -229,6 +264,10 @@ export function SiteHeader() {
               </div>
             ) : (
               <div className="flex flex-col space-y-3 pt-2">
+                <Link href="/design-gallery" className="text-[#fcfcfb] text-lg flex items-center gap-2 mb-2">
+                  <LayoutGrid className="h-5 w-5" />
+                  Design Gallery
+                </Link>
                 <Link href="/login">
                   <Button variant="outline" className="btn-outline w-full" style={{ backgroundColor: "transparent", color: "#fcfcfb", borderColor: "#9f7756" }}>
                     Sign In

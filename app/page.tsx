@@ -47,7 +47,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-[#ede7e3] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="h-6 w-6 text-[#72513a]" />
               </div>
-              <h3 className="text-xl font-medium mb-3 text-[#72513a]">Event Details & Memorial Services</h3>
+              <h3 className="text-xl font-medium mb-3 text-[#72513a]">Event Details</h3>
               <p className="text-[#72513a]">Share your celebration dates or memorial service details with those who matter most.</p>
             </div>
             
