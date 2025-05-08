@@ -88,7 +88,7 @@ export default function DashboardPage() {
         <h1 className="text-2xl font-bold text-[#422717]">Dashboard</h1>
         <div className="flex space-x-3">
           <Link
-            href="/create-event"
+            href="/create-new"
             className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#fcfcfb] bg-[#72513a] border border-transparent rounded-md shadow-sm hover:bg-[#422717] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#9f7756]"
           >
             <PlusCircle className="w-4 h-4 mr-2" />
@@ -172,7 +172,7 @@ export default function DashboardPage() {
           </div>
           <div className="bg-[#ede7e3] px-5 py-3 text-sm text-center">
             <Link
-              href="/create-event"
+              href="/create-new"
               className="font-medium text-[#9f7756] hover:text-[#72513a] inline-flex items-center justify-center"
             >
               <PlusCircle className="mr-1 h-4 w-4" />

@@ -32,7 +32,7 @@ export default function CreateEventPage() {
   const router = useRouter();
 
   const handleSelectEventType = (typeId: string) => {
-    router.push(`/create-event/${typeId}`);
+    router.push(`/create-new/${typeId}`);
   };
 
   return (

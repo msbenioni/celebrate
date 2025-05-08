@@ -11,22 +11,22 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/floral-pattern.svg')] opacity-5"></div>
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="text-3xl text-[#9f7756] font-serif italic mb-4 block">Honoring Life's Moments – Celebrating the Present, Remembering the Past.</span>
+            <span className="text-3xl text-[#9f7756] font-serif italic mb-4 block">Honoring Every Moment – Celebrating Life, Remembering Love.</span>
             <h1 className="text-5xl font-bold mb-6 text-[#422717]">
               Celebrate Life's Moments & Remember Loved Ones
             </h1>
             <p className="text-xl mb-8 text-[#72513a]">
-              Create beautiful websites for weddings, birthdays, anniversaries, or heartfelt tributes. Share stories, collect RSVPs, and honor memories.
+              Create beautiful websites for weddings, birthdays, anniversaries, and heartfelt tributes. Share stories, collect RSVPs, and keep memories alive forever.
             </p>
             <div className="flex gap-4 justify-center">
               <Link href="/signup">
                 <Button className="text-lg px-6 py-2 rounded-md" style={{ backgroundColor: "#72513a", color: "#fcfcfb" }}>
-                  Create Your Celebration or Tribute Website
+                  Create Your Own
                 </Button>
               </Link>
               <Link href="/login">
                 <Button variant="outline" className="text-lg px-6 py-2 rounded-md" style={{ backgroundColor: "transparent", color: "#422717", borderColor: "#d3bfaa" }}>
-                  Sign In to Access Memories
+                  Sign In
                 </Button>
               </Link>
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
                 <Calendar className="h-6 w-6 text-[#72513a]" />
               </div>
               <h3 className="text-xl font-medium mb-3 text-[#72513a]">Event Details & Memorial Services</h3>
-              <p className="text-[#72513a]">Share important dates, venue information, or service details for all life events.</p>
+              <p className="text-[#72513a]">Share your celebration dates or memorial service details with those who matter most.</p>
             </div>
             
             <div className="bg-white rounded-lg p-6 shadow-sm border border-[#d3bfaa]/30 text-center transition-all duration-300 hover:shadow-md">
@@ -56,7 +56,7 @@ export default function Home() {
                 <Users className="h-6 w-6 text-[#72513a]" />
               </div>
               <h3 className="text-xl font-medium mb-3 text-[#72513a]">RSVP & Guest Management</h3>
-              <p className="text-[#72513a]">Seamlessly collect and manage responses for celebrations or remembrance gatherings.</p>
+              <p className="text-[#72513a]">Effortlessly manage guest responses for weddings, birthdays, and remembrance gatherings.</p>
             </div>
             
             <div className="bg-white rounded-lg p-6 shadow-sm border border-[#d3bfaa]/30 text-center transition-all duration-300 hover:shadow-md">
@@ -64,7 +64,7 @@ export default function Home() {
                 <Gift className="h-6 w-6 text-[#72513a]" />
               </div>
               <h3 className="text-xl font-medium mb-3 text-[#72513a]">Registry & Memory Sharing</h3>
-              <p className="text-[#72513a]">Create gift registries for events and memory books or virtual guestbooks for tributes.</p>
+              <p className="text-[#72513a]">Create gift registries for joyous occasions or virtual guestbooks for heartfelt memories.</p>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm border border-[#d3bfaa]/30 text-center transition-all duration-300 hover:shadow-md">
@@ -72,7 +72,7 @@ export default function Home() {
                 <Camera className="h-6 w-6 text-[#72513a]" />
               </div>
               <h3 className="text-xl font-medium mb-3 text-[#72513a]">Photo & Video Galleries</h3>
-              <p className="text-[#72513a]">Share photos and videos to cherish memories and celebrate life.</p>
+              <p className="text-[#72513a]">Capture and share your most treasured moments—past and present.</p>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm border border-[#d3bfaa]/30 text-center transition-all duration-300 hover:shadow-md">
@@ -80,7 +80,7 @@ export default function Home() {
                 <MessageSquare className="h-6 w-6 text-[#72513a]" />
               </div>
               <h3 className="text-xl font-medium mb-3 text-[#72513a]">Online Guestbook</h3>
-              <p className="text-[#72513a]">Allow friends and family to leave heartfelt messages and stories.</p>
+              <p className="text-[#72513a]">Give your loved ones a place to share their memories, thoughts, and well wishes.</p>
             </div>
           </div>
         </div>
@@ -89,11 +89,11 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16" style={{ backgroundColor: "#d3bfaa30" }}>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-medium mb-6" style={{ color: "#422717" }}>Start Honoring & Celebrating Today</h2>
-          <p className="text-lg max-w-2xl mx-auto mb-8" style={{ color: "#422717" }}>Create your personalized website in minutes to share your stories, honor loved ones, and celebrate life's precious moments.</p>
+          <h2 className="text-3xl font-medium mb-6" style={{ color: "#422717" }}>Celebrate Today. Remember Forever.</h2>
+          <p className="text-lg max-w-2xl mx-auto mb-8" style={{ color: "#422717" }}>In just minutes, create a beautiful, lasting space for celebrations or tributes—where memories are cherished and stories are shared.</p>
           <Link href="/signup">
             <Button className="text-lg px-6 py-2 rounded-md" style={{ backgroundColor: "#72513a", color: "#fcfcfb" }}>
-              Create Your Celebration or Tribute Website
+              Create Your Own
             </Button>
           </Link>
         </div>

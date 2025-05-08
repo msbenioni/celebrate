@@ -20,7 +20,7 @@ export function SiteFooter() {
       </div>
       
       <div className="container py-16 px-4">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="relative">
@@ -104,6 +104,44 @@ export function SiteFooter() {
                   className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
                 >
                   RSVP Management
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-medium text-[#422717]">Resources</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/resources/event-planning"
+                  className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
+                >
+                  Event Planning Tips
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/tribute-ideas"
+                  className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
+                >
+                  Tribute Ideas
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/memorial-etiquette"
+                  className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
+                >
+                  Memorial Service Etiquette
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/celebration-themes"
+                  className="text-sm text-[#72513a] hover:text-[#9f7756] transition-colors"
+                >
+                  Wedding & Celebration Themes
                 </Link>
               </li>
             </ul>
@@ -214,6 +252,7 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
+
         </div>
 
         <div className="mt-16 border-t border-[#d3bfaa] pt-8">
@@ -222,6 +261,8 @@ export function SiteFooter() {
           </p>
         </div>
       </div>
+    
     </footer>
   );
 }
+
