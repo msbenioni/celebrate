@@ -160,21 +160,80 @@
   
   /* Elegant card styling with warm tan border */
   .feature-card {
-    @apply bg-card rounded-lg p-6 shadow-sm transition-all duration-300 hover:shadow-md;
+    @apply rounded-lg p-6 shadow-sm transition-all duration-300;
     border: 1px solid #d3bfaa; /* Warm tan #D3BFAA */
-    background-color: #fcfcfb; /* Almost white #FCFCFB */
+    background-color: rgb(245, 241, 238); /* Slightly darker than #FCFCFB */
+  }
+  
+  .feature-card:hover {
+    background-color: rgba(237, 231, 227, 0.15); /* #ede7e3 with opacity */
+    border-color: rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
   
   /* Mid-tone brown primary button with rounded corners */
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all;
-    background-color: #72513a; /* Mid-tone warm brown #72513A */
+    background: linear-gradient(135deg, #72513a 0%, #9f7756 100%); /* Gradient from primary to secondary */
     color: #fcfcfb; /* Almost white #FCFCFB */
     box-shadow: 0 4px 14px rgba(114, 81, 58, 0.2);
   }
   
   .btn-primary:hover {
-    background-color: #9f7756; /* Copper gold #9F7756 */
+    background: linear-gradient(135deg, #9f7756 0%, #72513a 100%); /* Reversed gradient */
+    box-shadow: 0 4px 14px rgba(159, 119, 86, 0.3);
+  }
+  
+  /* Secondary button styling */
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all;
+    border: 1px solid #9f7756; /* Copper gold #9F7756 */
+    color: #fcfcfb; /* Almost white #FCFCFB */
+    background-color: transparent;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgba(159, 119, 86, 0.2); /* #9f7756 with opacity */
+  }
+  
+  /* Navigation link hover state */
+  .nav-link {
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #9f7756 !important; /* Copper gold #9F7756 */
+  }
+  
+  /* Section divider */
+  .section-divider {
+    border-bottom: 1px solid rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
+    margin: 2rem 0;
+  }
+  
+  /* Main headline with elegant underline */
+  .main-headline {
+    border-bottom: 2px solid rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+  
+  /* Social media icons in footer */
+  .social-icon {
+    color: #9f7756; /* Copper gold #9F7756 */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #72513a; /* Mid-tone warm brown #72513A */
+  }
+  
+  /* Breadcrumb divider between sections */
+  .breadcrumb-divider {
+    border-top: 1px solid rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
+    width: 50px;
+    margin: 1.5rem auto;
   }
   
   /* Copper gold secondary button */
