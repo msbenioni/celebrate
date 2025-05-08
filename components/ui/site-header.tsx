@@ -105,8 +105,7 @@ export function SiteHeader() {
             aria-label="Go to homepage"
           >
             <div className="relative">
-              <Heart className="h-6 w-6 transition-transform group-hover:scale-110" style={{ color: '#9f7756' }} />
-              <Heart className="h-6 w-6 absolute -top-1 -right-1 opacity-50 scale-75 transition-transform group-hover:scale-90" style={{ color: '#9f7756' }} />
+              <Heart className="h-6 w-6 transition-transform group-hover:scale-110" style={{ color: '#d4af37' }} />
             </div>
             <span className="font-serif text-xl font-medium" style={{ color: '#fcfcfb' }}>
               Celebrate & Remember

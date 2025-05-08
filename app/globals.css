@@ -159,20 +159,25 @@
   }
   
   /* Elegant card styling with warm tan border */
+  /* ==============================
+    Card Hover Effect
+  ============================== */
   .feature-card {
     @apply rounded-lg p-6 shadow-sm transition-all duration-300;
-    border: 1px solid #d3bfaa; /* Warm tan #D3BFAA */
-    background-color: rgb(245, 241, 238); /* Slightly darker than #FCFCFB */
+    background-color: rgb(252, 252, 251); /* #fcfcfb */
+    border: 1px solid rgba(211, 191, 170, 0.5); /* #d3bfaa with opacity */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
   
   .feature-card:hover {
     background-color: rgba(237, 231, 227, 0.15); /* #ede7e3 with opacity */
-    border-color: rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-color: #D4AF37; /* Goldenrod */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
   
-  /* Mid-tone brown primary button with rounded corners */
+  /* ==============================
+    Button Hover States
+  ============================== */
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all;
     background: linear-gradient(135deg, #72513a 0%, #9f7756 100%); /* Gradient from primary to secondary */
@@ -197,43 +202,92 @@
     background-color: rgba(159, 119, 86, 0.2); /* #9f7756 with opacity */
   }
   
-  /* Navigation link hover state */
-  .nav-link {
+  /* ==============================
+    Section Dividers & Lines
+  ============================== */
+  .section-divider {
+    border-bottom: 2px solid #D4AF37; /* Goldenrod */
+    margin: 2rem 0;
+    transition: border-color 0.3s ease;
+  }
+  
+  .section-divider:hover {
+    border-bottom: 2px solid #FFD700; /* Pure Gold */
+  }
+  
+  /* ==============================
+    Headline Underlines
+  ============================== */
+  .main-headline {
+    border-bottom: 1px solid #D4AF37; /* Goldenrod */
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .main-headline:hover {
+    border-bottom: 1px solid #FFD700; /* Pure Gold */
+  }
+  
+  /* ==============================
+    Breadcrumb Separator
+  ============================== */
+  .breadcrumb-divider {
+    border-top: 1px solid #D4AF37; /* Goldenrod */
+    width: 50px;
+    margin: 1.5rem auto;
+    transition: border-color 0.3s ease;
+  }
+  
+  .breadcrumb-divider:hover {
+    border-top: 1px solid #FFD700; /* Pure Gold */
+  }
+  
+  /* ==============================
+    Footer Links & Social Icons
+  ============================== */
+  .footer-link {
+    color: rgba(159, 119, 86, 1);
     transition: color 0.3s ease;
   }
   
-  .nav-link:hover {
-    color: #9f7756 !important; /* Copper gold #9F7756 */
+  .footer-link:hover {
+    color: #FFD700; /* Pure Gold */
   }
   
-  /* Section divider */
-  .section-divider {
-    border-bottom: 1px solid rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
-    margin: 2rem 0;
-  }
-  
-  /* Main headline with elegant underline */
-  .main-headline {
-    border-bottom: 2px solid rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
-    display: inline-block;
-    padding-bottom: 4px;
-  }
-  
-  /* Social media icons in footer */
   .social-icon {
-    color: #9f7756; /* Copper gold #9F7756 */
+    color: rgba(159, 119, 86, 1);
     transition: color 0.3s ease;
   }
   
   .social-icon:hover {
-    color: #72513a; /* Mid-tone warm brown #72513A */
+    color: #FFD700; /* Pure Gold */
   }
   
-  /* Breadcrumb divider between sections */
-  .breadcrumb-divider {
-    border-top: 1px solid rgba(159, 119, 86, 0.5); /* #9f7756 with opacity */
-    width: 50px;
-    margin: 1.5rem auto;
+  /* ==============================
+    Navigation Hover States
+  ============================== */
+  .nav-link {
+    color: var(--navbar-foreground);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #FFD700 !important; /* Pure Gold */
+  }
+  
+  /* ==============================
+    Section Title Accent Line
+  ============================== */
+  .section-title {
+    display: inline-block;
+    border-bottom: 2px solid #D4AF37; /* Goldenrod */
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .section-title:hover {
+    border-color: #FFD700; /* Pure Gold */
   }
   
   /* Copper gold secondary button */

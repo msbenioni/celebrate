@@ -7,25 +7,13 @@ import { Heart, Facebook, Instagram, Twitter } from "lucide-react";
 export function SiteFooter() {
   return (
     <footer className="border-t border-[#d3bfaa]" style={{ backgroundColor: "#72513a" }}>
-      {/* Decorative floral divider */}
-      <div className="w-full flex justify-center">
-        <div className="w-24 h-6 relative overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-1 bg-[#9f7756]/50"></div>
-          </div>
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Heart className="h-4 w-4 text-[#9f7756]" />
-          </div>
-        </div>
-      </div>
       
       <div className="container py-16 px-4">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="relative">
-                <Heart className="h-5 w-5 text-[#9f7756]" />
-                <Heart className="h-5 w-5 text-[#9f7756] absolute -top-1 -right-1 opacity-50 scale-75" />
+                <Heart className="h-5 w-5 text-[#d4af37]" />
               </div>
               <span className="font-serif text-lg font-medium text-[#fcfcfb]">Celebrate & Remember</span>
             </div>
